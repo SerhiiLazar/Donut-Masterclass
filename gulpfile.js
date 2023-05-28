@@ -26,6 +26,7 @@ import changed       from 'gulp-changed'
 import concat        from 'gulp-concat'
 import rsync         from 'gulp-rsync'
 import {deleteAsync} from 'del'
+import ghPages from 'gulp-gh-pages';
 
 function browsersync() {
 	browserSync.init({
@@ -122,20 +123,29 @@ async function cleandist() {
 }
 
 function deploy() {
-	return src('dist/')
-		.pipe(rsync({
-			root: 'dist/',
-			hostname: 'username@yousite.com',
-			destination: 'yousite/public_html/',
-			clean: true, // Mirror copy with file deletion
-			include: [/* '*.htaccess' */], // Included files to deploy,
-			exclude: [ '**/Thumbs.db', '**/*.DS_Store' ],
-			recursive: true,
-			archive: true,
-			silent: false,
-			compress: true
-		}))
+	return src('dist/**/*')
+		.pipe(ghPages({
+			branch: 'gh-pages',
+			push: true,
+			message: 'Deploy to GitHub Pages'
+		}));
 }
+
+// function deploy() {
+// 	return src('dist/')
+// 		.pipe(rsync({
+// 			root: 'dist/',
+// 			hostname: 'username@yousite.com',
+// 			destination: 'yousite/public_html/',
+// 			clean: true, // Mirror copy with file deletion
+// 			include: [/* '*.htaccess' */], // Included files to deploy,
+// 			exclude: [ '**/Thumbs.db', '**/*.DS_Store' ],
+// 			recursive: true,
+// 			archive: true,
+// 			silent: false,
+// 			compress: true
+// 		}))
+// }
 
 function startwatch() {
 	watch(`app/styles/${preprocessor}/**/*`, { usePolling: true }, styles)
