@@ -6,7 +6,7 @@
     position: relative;
     &::after {
         content: "";
-        background-image: url('../../../images/dist/pic-donuts.png');
+        background-image: url('/images/dist/pic-donuts.png');
         background-position: top;
         background-repeat: no-repeat;
         background-size: 38%;
@@ -19,7 +19,7 @@
     }
     &::before {
         content: "";
-        background-image: url('../../../images/dist/bg-header-mobail.png');
+        background-image: url('/images/dist/bg-header-mobail.png');
         background-size: cover;
         background-position: center top;
         background-repeat: no-repeat;
