@@ -2,6 +2,7 @@
 	"name": "optimizedhtml",
 	"version": "5.0.0",
 	"description": "OptimizedHTML 5 - Lightweight Gulp Starter",
+	"homepage": "https://SerhiiLazar.github.io/Donut-Masterclass",
 	"main": "index.js",
 	"author": "WebDesign Master",
 	"type": "module",
