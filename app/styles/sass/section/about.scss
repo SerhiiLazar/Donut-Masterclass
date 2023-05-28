@@ -3,7 +3,7 @@
     align-items: center;
     &::before {
         content: "";
-        background-image: url('/images/dist/bg-header-mobail.png');
+        background-image: url('../images/dist/bg-header-mobail.png');
         background-size: contain;
         background-position: 50%;
         background-repeat: no-repeat;
