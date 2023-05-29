@@ -1,9 +1,40 @@
+body {
+    &::after {
+        content: "";
+        background-image: url('../images/dist/bg-header-mobail.png');
+        background-size: contain;
+        background-position: top;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+            }
+    // &::before {
+    //     content: "";
+    //     background-image: url('../images/dist/bg-footer-mobail.png');
+    //     background-size: contain;
+    //     background-position: top;
+    //     background-repeat: no-repeat;
+    //     position: absolute;
+    //     bottom: 30px;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     z-index: -2;
+    //         }
+}
+
 .header {
     text-align: center;
     padding-top: 8px;
     max-width: 320px;
     margin: 0 auto;
     position: relative;
+    background-color: #FEF3E4;
+    z-index: 0;
     &::after {
         content: "";
         background-image: url('../images/dist/pic-donuts.png');
@@ -17,23 +48,11 @@
         width: 100%;
         z-index: -1;
     }
-    &::before {
-        content: "";
-        background-image: url('../images/dist/bg-header-mobail.png');
-        background-size: cover;
-        background-position: center top;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -2;
-            }
+    
     &__list {
         display: none;
     }
+    //Open modal button
     &__btn {
         position: absolute;
         top: 0;
@@ -43,6 +62,63 @@
         background-color: #FEF3E4;
         border: none;
     }
+    //burger-menu 
+    &__burger-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(254, 243, 228, 0.9);
+        z-index: 999;
+        overflow: scroll;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        transform: translateX(100%);
+        transition: transform 250ms var(--time-function);
+        @include mq(mobile) {
+            height: 100%;
+        }
+        @include mq(tablet) {
+            display: none;
+        }
+    }
+    &__logo-burger {
+        margin-top: 25px;
+    }
+    &__burger-menu.is-open {
+        transform: translateX(0);
+    }
+    &__list-menu {
+        margin-top: 5px;
+    }
+    &__item-menu {
+        padding: 20px;
+    }
+    &__link-menu {
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.2;
+        color: #2E2520;
+        &:hover {
+            color: #876655;
+        }
+    }
+    //Close burger menu 
+    &__btn-menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 5px;
+        margin: 20px;
+        background-color: transparent;
+        border: none;
+    }
+    //heder content
     &__title {
         font-size: 30px;
         padding: 0 28px;
