@@ -9,12 +9,16 @@
     margin-top: 18px;
   }
   &__service {
-    display: grid;
-    height: 100vh;
-    grid-template-columns: repeat(2, 130px);
-    grid-template-rows: repeat(4, 1fr);
-    margin-top: 55px;
-    grid-column-gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    // display: grid;
+    // height: 100vh;
+    // grid-template-columns: repeat(2, 130px);
+    // grid-template-rows: repeat(4, 1fr);
+    // margin-top: 55px;
+    // grid-column-gap: 20px;
     
   }
   &__service-item--1 {
@@ -116,12 +120,12 @@
     bottom: 10px;
     left: 42%;
   }
-  &__service-link {
-    list-style: none;
-    text-decoration: none;
-    color: inherit;
-    &:hover {
-      color: inherit;
-    }
+  // &__service-link {
+  //   list-style: none;
+  //   text-decoration: none;
+  //   color: inherit;
+  //   &:hover {
+  //     color: inherit;
+  //   }
   }
-}
+

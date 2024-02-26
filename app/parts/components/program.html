@@ -1,4 +1,4 @@
-<section class="program container">
+<div class="program container">
   <h2 class="general-title">Program</h2>
   <p class="program__text">
     Indulge in this immersive sweet treat experience with The Chef Donut Queen
@@ -15,23 +15,44 @@
   </ul>
   <button class="program__button button-read"><a href="#">Read more</a></button>
   <ul class="program__service">
-    <li class="program__service-item--1">
-      <a class="program__service-link" href="#"
-        ><h3 class="program__service-title">Type of the event</h3>
-        <p class="program__sevice-text">Cooking classes</p>
-        <svg
-          class="program__icons"
-          width="19"
-          height="19"
-          aria-label="infoIcon"
-        >
-          <use
-            class="program__icon"
-            href="./images/dist/icons.svg#icon-Frame-19"
-          ></use></svg>
-        </a>
+    <li class="program__service-item">
+      <picture class="content__img">
+        <!-- <source
+          srcset="
+            ./images/program/desktop/event-donut-desktop.png    1x,
+            ./images/program/desktop/event-donut-desktop@2x.png 2x
+          "
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="
+            ./images/program/tablet/event-donut-tablet.png    1x,
+            ./images/program/tablet/event-donut-tablet@2x.png 2x
+          "
+          media="(min-width: 768px)"
+        /> -->
+        <source
+          srcset="
+            ../images/dist/programs/event-donat-mobile.png 1x,
+            ../images/dist/programs/event-donat-mobile.png 2x
+          "
+          media="(min-width: 320px)"
+        />
+        <img
+          src="../images/dist/programs/event-donat-desktop.png"
+          alt="type of the event"
+        />
+      </picture>
+      <h3 class="program__service-title">Type of the event</h3>
+      <p class="program__sevice-text">Cooking classes</p>
+      <svg class="program__icons" width="19" height="19" aria-label="infoIcon">
+        <use
+          class="program__icon"
+          href="./images/dist/icons.svg#icon-Frame-19"
+        ></use>
+      </svg>
     </li>
-    <li class="program__service-item--2">
+    <li class="program__service-item">
       <a class="program__service-link" href="#">
         <h3 class="program__service-title">Number of guests</h3>
         <p class="program__sevice-text">1 to 20</p>
@@ -48,7 +69,7 @@
         </svg>
       </a>
     </li>
-    <li class="program__service-item--3">
+    <li class="program__service-item">
       <a class="program__service-link" href="#">
         <h3 class="program__service-title">Time of the event</h3>
         <p class="program__sevice-text">18:30 (2.5 hours)</p>
@@ -65,7 +86,7 @@
         </svg>
       </a>
     </li>
-    <li class="program__service-item--4">
+    <li class="program__service-item">
       <a class="program__service-link" href="#">
         <h3 class="program__service-title">The host speaks</h3>
         <p class="program__sevice-text">English, French</p>
@@ -78,8 +99,9 @@
           <use
             class="program__icon"
             href="./images/dist/icons.svg#icon-Frame-22"
-          ></use></svg>
-        </a>
+          ></use>
+        </svg>
+      </a>
     </li>
   </ul>
-</section>
+</div>
