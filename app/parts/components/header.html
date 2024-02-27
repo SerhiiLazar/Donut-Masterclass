@@ -1,37 +1,48 @@
 <header class="header">
   <div class="container">
-    <img
-      class="header__logo"
-      src="images/dist/logo.png"
-      alt="logo"
-      width="96"
-      height="44"
-    />
-    <ul class="header__list" id="main-container">
-      <li class="header__item"><a class="header__link" href="">About us</a></li>
-      <li class="header__item"><a class="header__link" href="">Program</a></li>
-      <li class="header__item"><a class="header__link" href="">Reviews</a></li>
-      <li class="header__item"><a class="header__link" href="">Contacts</a></li>
-    </ul>
-    <button
-      class="header__btn header__btn--burger js-open-menu btn-none"
-      type="button"
-      aria-expanded="false"
-      aria-controls="main-container"
-      data-menu-button
-    >
-      <svg
-        class="header__icons"
-        width="30"
-        height="16"
-        aria-label="navigation open button"
+    <nav class="header__nav">
+      <img
+        class="header__logo"
+        src="images/dist/logo.png"
+        alt="logo"
+        width="96"
+        height="44"
+      />
+      <ul class="header__list" id="main-container">
+        <li class="header__item">
+          <a class="header__link" href="">About us</a>
+        </li>
+        <li class="header__item">
+          <a class="header__link" href="">Program</a>
+        </li>
+        <li class="header__item">
+          <a class="header__link" href="">Reviews</a>
+        </li>
+        <li class="header__item">
+          <a class="header__link" href="">Contacts</a>
+        </li>
+      </ul>
+      <button
+        class="header__btn header__btn--burger js-open-menu btn-none"
+        type="button"
+        aria-expanded="false"
+        aria-controls="main-container"
+        data-menu-button
       >
-        <use
-          class="header__icon--burger"
-          href="./images/dist/icons.svg#icon-menu_burger"
-        ></use>
-      </svg>
-    </button>
+        <svg
+          class="header__icons"
+          width="30"
+          height="16"
+          aria-label="navigation open button"
+        >
+          <use
+            class="header__icon--burger"
+            href="./images/dist/icons.svg#icon-menu_burger"
+          ></use>
+        </svg>
+      </button>
+    </nav>
+
     <nav
       class="header__burger-menu js-menu-container"
       id="main-container"
@@ -78,52 +89,55 @@
         </svg>
       </button>
     </nav>
-    <h1 class="header__title">Donut Masterclass with the Donut King</h1>
-    <p class="header__text">Hosted by Eva Green</p>
-    <button class="header__button button">Register</button>
-    <ul class="header__list-social">
-      <li class="header__item-social">
-        <a class="header__link-social" href=""
-          ><svg
-            class="header__icons"
-            width="16"
-            height="16"
-            aria-label="navigation open button"
-          >
-            <use
-              class="header__icon--burger"
-              href="./images/dist/icons.svg#icon-twitter"
-            ></use></svg
-        ></a>
-      </li>
-      <li class="header__item-social">
-        <a class="header__link-social" href=""
-          ><svg
-            class="header__icons"
-            width="16"
-            height="16"
-            aria-label="navigation open button"
-          >
-            <use
-              class="header__icon--burger"
-              href="./images/dist/icons.svg#icon-instagram"
-            ></use></svg
-        ></a>
-      </li>
-      <li class="header__item-social">
-        <a class="header__link-social" href=""
-          ><svg
-            class="header__icons"
-            width="16"
-            height="16"
-            aria-label="navigation open button"
-          >
-            <use
-              class="header__icon--burger"
-              href="./images/dist/icons.svg#icon-facebook"
-            ></use></svg
-        ></a>
-      </li>
-    </ul>
+
+    <div class="header__wrapper">
+      <h1 class="header__title">Donut Masterclass with the Donut King</h1>
+      <p class="header__text">Hosted by Eva Green</p>
+      <button class="header__button button">Register</button>
+      <ul class="header__list-social">
+        <li class="header__item-social">
+          <a class="header__link-social" href=""
+            ><svg
+              class="header__icons"
+              width="16"
+              height="16"
+              aria-label="navigation open button"
+            >
+              <use
+                class="header__icon--burger"
+                href="./images/dist/icons.svg#icon-twitter"
+              ></use></svg
+          ></a>
+        </li>
+        <li class="header__item-social">
+          <a class="header__link-social" href=""
+            ><svg
+              class="header__icons"
+              width="16"
+              height="16"
+              aria-label="navigation open button"
+            >
+              <use
+                class="header__icon--burger"
+                href="./images/dist/icons.svg#icon-instagram"
+              ></use></svg
+          ></a>
+        </li>
+        <li class="header__item-social">
+          <a class="header__link-social" href=""
+            ><svg
+              class="header__icons"
+              width="16"
+              height="16"
+              aria-label="navigation open button"
+            >
+              <use
+                class="header__icon--burger"
+                href="./images/dist/icons.svg#icon-facebook"
+              ></use></svg
+          ></a>
+        </li>
+      </ul>
+    </div>
   </div>
 </header>

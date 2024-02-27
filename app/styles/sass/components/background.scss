@@ -1,31 +1,33 @@
 .upper-background {
     width: 100%;
 
-    @media screen and (max-width: $mobile-max) {
+    @include mq(mobile-only) {
         background-image: url('../../../images/dist/header-pic-mobail.png'),
         url('../../../images/dist/bg-header-mobail.png');
         background-size: 120px 116px, 100%;
         background-repeat: no-repeat;
         background-position: top left, top;
+        @include mq(retina){
+          background-image: url('../../../images/dist/header/header@2x.png'),
+            url('../../../images/dist/bg@2x.png');
+            
+        }
     }
 
-    @media screen and (min-width: $tablet) and (max-width: $tablet-max) {
+    @include mq(tablet and tablet-only){
         background-image: url('../../../images/dist/header-pic-tablet.png'),
           url('../../../images/dist/bg-header-tablet.png');
         background-size: 380px 360px, 100%;
         background-repeat: no-repeat;
         background-position: top left 80%, top;
     
-        // @media (min-device-pixel-ratio: 2),
-        // (-webkit-min-device-pixel-ratio: 2),
-        // (min-resolution: 192dpi),
-        // (min-resolution: 2dppx) {
-        //   background-image: url('/src/images/header/tablet/donuts-tablet@2x.png'),
-        //     url('/src/images/background/tablet/bg-header-tablet@2x.png');
-        // }
+        @include mq(retina) {
+          background-image: url('../../../images/dist/header/header-tablet@2x.png'),
+          url('../../../images/dist/header/bg-tablet@2x.png');
+        }
       }
     
-      @media screen and (min-width: $desktop) {
+      @include mq(desktop) {
         background-image: url('../../../images/dist/spoon-desktop.png'),
           url('../../../images/dist/header-pic-desktop.png'),
           url('../../../images/dist/bg-header-desctop.png');
@@ -33,61 +35,58 @@
         background-repeat: no-repeat;
         background-position: 0 501px, top right, top;
     
-    //     @media (min-device-pixel-ratio: 2),
-    //     (-webkit-min-device-pixel-ratio: 2),
-    //     (min-resolution: 192dpi),
-    //     (min-resolution: 2dppx) {
-    //       background-image: url('/src/images/header/desktop/spoon-desktop@2x.png'),
-    //         url('/src/images/header/desktop/donuts-desktop@2x.png'),
-    //         url('/src/images/background/desktop/bg-header-desktop@2x.png');
-    //     }
+        @include mq(retina) {
+          background-image: url('../../../images/dist/header/spoon-desctop@2x.png'),
+          url('../../../images/dist/header/header-desctop@2x.png'),
+          url('../../../images/dist/header/bg-desctop@2x.png');
+        }
       }
     }
     
-    .secondary-background {
-      width: 100%;
+    // .secondary-background {
+    //   width: 100%;
     
-      @media screen and (max-width: $mobile-max) {
-        z-index: 1000;
-        background-image: url('../../../images/dist/background-mobile.png');
-        background-size: 100% 1338px;
-        background-repeat: no-repeat;
-        background-position: top;
+    //   @media screen and (max-width: $mobile-only) {
+    //     z-index: 1000;
+    //     background-image: url('../../../images/dist/background-mobile.png');
+    //     background-size: 100% 1338px;
+    //     background-repeat: no-repeat;
+    //     background-position: top;
     
-        // @media (min-device-pixel-ratio: 2),
-        // (-webkit-min-device-pixel-ratio: 2),
-        // (min-resolution: 192dpi),
-        // (min-resolution: 2dppx) {
-        //   background-image: url('/src/images/background/mobile/background-mobile@2x.png');
-        // }
-      }
+    //     // @media (min-device-pixel-ratio: 2),
+    //     // (-webkit-min-device-pixel-ratio: 2),
+    //     // (min-resolution: 192dpi),
+    //     // (min-resolution: 2dppx) {
+    //     //   background-image: url('/src/images/background/mobile/background-mobile@2x.png');
+    //     // }
+    //   }
     
-      @media screen and (min-width: $tablet) and (max-width: $tablet-max) {
-        background-image: url('../../../images/dist/background-tablet.png');
-        background-size: 100% 1520px;
-        background-repeat: no-repeat;
-        background-position: top;
+    //   @media screen and (min-width: $tablet) and (max-width: $tablet-only) {
+    //     background-image: url('../../../images/dist/background-tablet.png');
+    //     background-size: 100% 1520px;
+    //     background-repeat: no-repeat;
+    //     background-position: top;
     
-        // @media (min-device-pixel-ratio: 2),
-        // (-webkit-min-device-pixel-ratio: 2),
-        // (min-resolution: 192dpi),
-        // (min-resolution: 2dppx) {
-        //   background-image: url('/src/images/background/tablet/background-tablet@x2.png');
-        // }
-      }
+    //     // @media (min-device-pixel-ratio: 2),
+    //     // (-webkit-min-device-pixel-ratio: 2),
+    //     // (min-resolution: 192dpi),
+    //     // (min-resolution: 2dppx) {
+    //     //   background-image: url('/src/images/background/tablet/background-tablet@x2.png');
+    //     // }
+    //   }
     
-      @media screen and (min-width: $desktop) {
-        max-width: 100%;
-        background-image: url('../../../images/dist/background-desktop.png');
-        background-size: 100% 1860px;
-        background-repeat: no-repeat;
-        background-position: top;
+    //   @media screen and (min-width: $desktop) {
+    //     max-width: 100%;
+    //     background-image: url('../../../images/dist/background-desktop.png');
+    //     background-size: 100% 1860px;
+    //     background-repeat: no-repeat;
+    //     background-position: top;
     
-        // @media (min-device-pixel-ratio: 2),
-        // (-webkit-min-device-pixel-ratio: 2),
-        // (min-resolution: 192dpi),
-        // (min-resolution: 2dppx) {
-        //   background-image: url('/src/images/background/desktop/background-desktop@2x.png');
-        // }
-      }
-    }
+    //     // @media (min-device-pixel-ratio: 2),
+    //     // (-webkit-min-device-pixel-ratio: 2),
+    //     // (min-resolution: 192dpi),
+    //     // (min-resolution: 2dppx) {
+    //     //   background-image: url('/src/images/background/desktop/background-desktop@2x.png');
+    //     // }
+    //   }
+    // }
