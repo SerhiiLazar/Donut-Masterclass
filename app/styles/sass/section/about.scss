@@ -1,21 +1,101 @@
 .about {
     max-width: 320px;
+    margin: 0 auto;
     align-items: center;
+    @include mq(tablet and tablet-only) {
+        max-width: 100%;
+        margin-top: 60px;
+    }
+    @include mq(desktop) {
+        max-width: 100%;
+    }
+    &__list {
+
+        @include mq(tablet and tablet-only) {
+            display: flex;
+            justify-content: space-between;
+        }
+        @include mq(desktop) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &__item {
+        @include mq(tablet and tablet-only) {
+            width: 50%;
+        }
+        @include mq(desktop) {
+            width: 50%;
+        }
+    }
+    &__item-text {
+        @include mq(tablet and tablet-only) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 50%;
+        }
+        @include mq(desktop) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 50%;
+            padding: 0 108px;
+        }
+    }
+    &__images {
+        display: inline-block;
+        // width: 279px;
+        // height: 298px;
+        @include mq(tablet and tablet-only) {
+            padding-left: 13px;
+        }
+        @include mq(desktop) {
+            padding-left: 102px;
+        }
+        
+    }
     &__title {
         text-align: center;
         margin: 0;
         margin-top: 25px;
+        @include mq(tablet and tablet-only) {
+            font-size: 24px !important;
+            line-height: 1.25 !important;
+        }
+        @include mq(desktop) {
+            font-size: 36px !important;
+            line-height: 1.8 !important; 
+                  
+        }
     }
     &__text {
         margin: 0;
         margin-top: 8px;
-        text-align: justify;
         font-weight: 400;
         font-size: 16px;
         line-height: 1.25;
         color: #2E2520;
+        @include mq(desktop) {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 1.2;
+           }
     }
     &__button {
         margin-top: 18px;
+       
+    }
+    &__link {
+        @include mq(tablet and tablet-only) {
+            font-size: 18px !important;    
+        }
+        @include mq(desktop) {
+            
+            font-size: 20px !important;
+            
+           }
     }
 }
+
+

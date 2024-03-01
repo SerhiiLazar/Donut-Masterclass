@@ -12,6 +12,7 @@
   @include mq(desktop) {
     display: flex;
     max-width: 100%;
+    margin-bottom: 102px;
   }
 
   &__list {
@@ -44,12 +45,17 @@
       margin-right: 20px;
     }
     &__link {
-      text-decoration: none;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 22px;
-      color: #2e2520;
-      cursor: pointer;
+      @include mq(desktop) {
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: #2e2520;
+        cursor: pointer;
+      }
+      
+
+      padding: 5px;
     }
   }
 
@@ -156,6 +162,7 @@
     @include mq(tablet and tablet-only) {
       max-width: 224px;
       padding: 0;
+      margin-top: 16px;
       text-align: start;
     }
     @include mq(desktop) {
