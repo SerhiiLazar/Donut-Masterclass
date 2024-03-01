@@ -35,7 +35,7 @@
       />
       <ul class="header__list" id="main-container">
         <li class="header__item">
-          <a class="header__link" href="">About us</a>
+          <a class="header__link" href="#about">About us</a>
         </li>
         <li class="header__item">
           <a class="header__link" href="">Program</a>
@@ -82,7 +82,7 @@
       />
       <ul class="header__list-menu">
         <li class="header__item-menu">
-          <a class="header__link-menu" href="">About us</a>
+          <a class="header__link-menu" href="#about">About us</a>
         </li>
         <li class="header__item-menu">
           <a class="header__link-menu" href="">Program</a>
@@ -167,13 +167,32 @@
   </div>
 </header>
 
-      <div class="about container">
-    <img class="about__images" src="images/dist/img-about.png" alt="about pictures" width="279" height="298">
-    <h2 class="about__title general-title">About us</h2>
-    <p class="about__text">Oh My Donut is the shop which adores tasty deserts and spend hours to create sophisticated donuts which will save the world!
-    <br><br>Eva has been baking since she was six years old and over the last 49 years, she has created hundreds of cakes for weddings and has baked for many celebrities. Eva and our shop have received multiple awards & recognition for excellence. </p>
-    <button class="about__button button-read"><a href="#">Read more</a></button>
-</div>
+      <section id="about" class="about container" >
+    <ul  class="about__list">
+        <li class="about__item-pic">
+            <picture class="about__images">
+                 <source media="(max-width: 767px)" srcset="../../images/dist/about/about-small1x.png, ../../images/dist/about/about-small@2x.png 2x">
+                 <source media="(min-width: 768px) and (max-width: 1279px)" srcset="../../images/dist/about/about-medium1x.png, ../../images/dist/about/about-medium@2x.png 2x">
+                 <source media="(min-width: 1280px)" srcset="../../images/dist/about/about-large1x.png, ../../images/dist/about/about-large@2x.png 2x">
+                 <img src="../../images/dist/about/about-small1x.png" alt="about pictures">
+            </picture>
+        </li>
+        <li class="about__item-text">
+          <h2 class="about__title general-title">About us</h2>
+          <p class="about__text">
+            Oh My Donut is the shop which adores tasty deserts and spend hours to
+            create sophisticated donuts which will save the world! <br /><br />Eva has
+            been baking since she was six years old and over the last 49 years, she
+            has created hundreds of cakes for weddings and has baked for many
+            celebrities. Eva and our shop have received multiple awards & recognition
+            for excellence.<br /><br />We are going to teach you how to cook with passion and sparkles in your eyes! We love what we do and believe you will enjoy our cooking atmosphere! 
+          </p>
+          <button class="about__button button-read"><a class="about__link" href="#">Read more</a></button>
+        </li>
+      </ul>
+</section>
+
+
       <div class="program container">
   <h2 class="general-title">Program</h2>
   <p class="program__text">
