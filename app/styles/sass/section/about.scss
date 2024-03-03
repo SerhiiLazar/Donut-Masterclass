@@ -84,9 +84,6 @@
     }
     &__button {
         margin-top: 18px;
-       
-    }
-    &__link {
         @include mq(tablet and tablet-only) {
             font-size: 18px !important;    
         }
@@ -95,7 +92,9 @@
             font-size: 20px !important;
             
            }
+       
     }
+   
 }
 
 

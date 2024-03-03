@@ -1,59 +1,104 @@
-<div class="program container">
-  <h2 class="general-title">Program</h2>
-  <p class="program__text">
-    Indulge in this immersive sweet treat experience with The Chef Donut Queen
-    in her New York donut shop!
-  </p>
-  <ul class="program__list">
-    <li class="program__item">A stand up history of donuts</li>
-    <li class="program__item">Make 3 donut flavors of your choice</li>
-    <li class="program__item">Enjoy all-you-can-eat donuts</li>
-    <li class="program__item">Cocktail pairings and coffee included</li>
-    <li class="program__item">Photoshoot by professional photographer</li>
-    <li class="program__item">Secret receipt of cooking from Eva</li>
-    <li class="program__item">All products are included in the price</li>
+<section class="program container">
+  <ul class="program__contant">
+    <li class="program__title">
+      <h2 class="general-title">Program</h2></li>
+    <li class="program__text">
+      <p class="program__text">
+        Indulge in this immersive sweet treat experience with The Chef Donut
+        Queen in her New York donut shop!
+      </p>
+    </li>
+    <li class="program__contant-list">
+      <ul class="program__list">
+        <li class="program__item">A stand up history of donuts</li>
+        <li class="program__item">Make 3 donut flavors of your choice</li>
+        <li class="program__item">Enjoy all-you-can-eat donuts</li>
+        <li class="program__item">Cocktail pairings and coffee included</li>
+        <li class="program__item">Photoshoot by professional photographer</li>
+        <li class="program__item">Secret receipt of cooking from Eva</li>
+        <li class="program__item">All products are included in the price</li>
+      </ul>
+    </li>
+    <li>
+      <button class="program__button button-read">
+        Read more
+      </button>
+    </li>
   </ul>
-  <button class="program__button button-read"><a href="#">Read more</a></button>
   <ul class="program__service">
     <li class="program__service-item">
-      <picture class="content__img">
-        <!-- <source
-          srcset="
-            ./images/program/desktop/event-donut-desktop.png    1x,
-            ./images/program/desktop/event-donut-desktop@2x.png 2x
-          "
-          media="(min-width: 1280px)"
-        />
-        <source
-          srcset="
-            ./images/program/tablet/event-donut-tablet.png    1x,
-            ./images/program/tablet/event-donut-tablet@2x.png 2x
-          "
-          media="(min-width: 768px)"
-        /> -->
-        <source
-          srcset="
-            ../images/dist/programs/event-donat-mobile.png 1x,
-            ../images/dist/programs/event-donat-mobile.png 2x
-          "
-          media="(min-width: 320px)"
-        />
-        <img
-          src="../images/dist/programs/event-donat-desktop.png"
-          alt="type of the event"
-        />
-      </picture>
-      <h3 class="program__service-title">Type of the event</h3>
-      <p class="program__sevice-text">Cooking classes</p>
-      <svg class="program__icons" width="19" height="19" aria-label="infoIcon">
-        <use
-          class="program__icon"
-          href="./images/dist/icons.svg#icon-Frame-19"
-        ></use>
-      </svg>
+      <a class="program__service-link" href="#">
+        <picture class="program__img">
+          <source
+            media="(max-width: 767px)"
+            srcset="
+              ../../images/dist/programs/mobile/1_mobile1x.png,
+              ../../images/dist/programs/mobile/1_mobile@2x.png 2x
+            "
+          />
+          <source
+            media="(min-width: 768px) and (max-width: 1279px)"
+            srcset="
+              ../../images/dist/programs/tablet/1_tablet1x.png,
+              ../../images/dist/programs/tablet/1_tablet@2x.png 2x
+            "
+          />
+          <source
+            media="(min-width: 1280px)"
+            srcset="
+              ../../images/dist/programs/desktop/1_desktop1x.png,
+              ../../images/dist/programs/desktop/1_desktop@2x.png 2x
+            "
+          />
+          <img
+            src="../../images/dist/programs/mobile/1_mobile1x.png"
+            alt="type of the event"
+          />
+        </picture>
+        <h3 class="program__service-title">Type of the event</h3>
+        <p class="program__sevice-text">Cooking classes</p>
+        <svg
+          class="program__icons"
+          width="19"
+          height="19"
+          aria-label="infoIcon"
+        >
+          <use
+            class="program__icon"
+            href="./images/dist/icons.svg#icon-Frame-19"
+          ></use>
+        </svg>
+      </a>
     </li>
     <li class="program__service-item">
       <a class="program__service-link" href="#">
+        <picture class="program__img">
+          <source
+            media="(max-width: 767px)"
+            srcset="
+              ../../images/dist/programs/mobile/2_mobile1x.png,
+              ../../images/dist/programs/mobile/2_mobile@2x.png 2x
+            "
+          />
+          <source
+            media="(min-width: 768px) and (max-width: 1279px)"
+            srcset="
+              ../../images/dist/programs/tablet/2_tablet1x.png,
+              ../../images/dist/programs/tablet/2_tablet@2x.png 2x
+            "
+          />
+          <source
+            media="(min-width: 1280px)"
+            srcset="
+              ../../images/dist/programs/desktop/2_desktop1x.png,
+              ../../images/dist/programs/desktop/2_desktop@2x.png 2x
+            "
+          />
+          <img
+            src="../../images/dist/programs/mobile/2_mobile1x.png"
+            alt="type of the event"
+          />
+        </picture>
         <h3 class="program__service-title">Number of guests</h3>
         <p class="program__sevice-text">1 to 20</p>
         <svg
@@ -71,6 +116,33 @@
     </li>
     <li class="program__service-item">
       <a class="program__service-link" href="#">
+        <picture class="program__img">
+          <source
+            media="(max-width: 767px)"
+            srcset="
+              ../../images/dist/programs/mobile/3_mobile1x.png,
+              ../../images/dist/programs/mobile/3_mobile@2x.png 2x
+            "
+          />
+          <source
+            media="(min-width: 768px) and (max-width: 1279px)"
+            srcset="
+              ../../images/dist/programs/tablet/3_tablet1x.png,
+              ../../images/dist/programs/tablet/3_tablet@2x.png 2x
+            "
+          />
+          <source
+            media="(min-width: 1280px)"
+            srcset="
+              ../../images/dist/programs/desktop/3_desktop1x.png,
+              ../../images/dist/programs/desktop/3_desktop@2x.png 2x
+            "
+          />
+          <img
+            src="../../images/dist/programs/mobile/3_mobile1x.png"
+            alt="type of the event"
+          />
+        </picture>
         <h3 class="program__service-title">Time of the event</h3>
         <p class="program__sevice-text">18:30 (2.5 hours)</p>
         <svg
@@ -88,6 +160,33 @@
     </li>
     <li class="program__service-item">
       <a class="program__service-link" href="#">
+        <picture class="program__img">
+          <source
+            media="(max-width: 767px)"
+            srcset="
+              ../../images/dist/programs/mobile/4_mobile1x.png,
+              ../../images/dist/programs/mobile/4_mobile@2x.png 2x
+            "
+          />
+          <source
+            media="(min-width: 768px) and (max-width: 1279px)"
+            srcset="
+              ../../images/dist/programs/tablet/4_tablet1x.png,
+              ../../images/dist/programs/tablet/4_tablet@2x.png 2x
+            "
+          />
+          <source
+            media="(min-width: 1280px)"
+            srcset="
+              ../../images/dist/programs/desktop/4_desktop1x.png,
+              ../../images/dist/programs/desktop/4_desktop@2x.png 2x
+            "
+          />
+          <img
+            src="../../images/dist/programs/mobile/4_mobile1x.png"
+            alt="type of the event"
+          />
+        </picture>
         <h3 class="program__service-title">The host speaks</h3>
         <p class="program__sevice-text">English, French</p>
         <svg
@@ -104,4 +203,4 @@
       </a>
     </li>
   </ul>
-</div>
+</section>
