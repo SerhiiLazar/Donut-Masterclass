@@ -2,12 +2,17 @@
     max-width: 320px;
     margin: 0 auto;
     align-items: center;
+    margin-top: 16px;
     @include mq(tablet and tablet-only) {
         max-width: 100%;
         margin-top: 60px;
+        padding-left: 32px;
+	    padding-right: 32px;
     }
     @include mq(desktop) {
         max-width: 100%;
+        padding-left: 123px;
+	    padding-right: 123px;
     }
     &__list {
 
@@ -29,18 +34,21 @@
         }
     }
     &__item-text {
+        margin-top: 16px;
         @include mq(tablet and tablet-only) {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             width: 50%;
+            margin-left: 32px;
         }
         @include mq(desktop) {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             width: 50%;
-            padding: 0 108px;
+            margin-left: 139px;
+            
         }
     }
     &__images {
@@ -48,10 +56,10 @@
         // width: 279px;
         // height: 298px;
         @include mq(tablet and tablet-only) {
-            padding-left: 13px;
+            
         }
         @include mq(desktop) {
-            padding-left: 102px;
+            
         }
         
     }

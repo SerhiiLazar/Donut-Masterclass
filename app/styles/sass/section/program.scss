@@ -1,25 +1,118 @@
 .program {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px;
+  @include mq(tablet and tablet-only) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 76px;
+    padding-left: 32px;
+	  padding-right: 32px;
+  }
+  @include mq(desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 65px;
+    max-width: 100%;
+    padding-left: 123px;
+	  padding-right: 123px;
+  }
+  &__content {
+    max-width: 280px;
+    @include mq(tablet and tablet-only) {
+      max-width: 336px;
+    }
+    @include mq(desktop) {
+      max-width: 392px;
+    }
+  }
+
+  &__text {
+    margin-top: 8px;
+    @include mq(desktop) {
+      margin-top: 20px;
+    }
+  }
+  &__text-paragraph {
+    font-size: 16px;
+    line-height: 1.25;
+    @include mq(desktop) {
+      font-size: 18px;
+      line-height: 1.22;
+      margin-bottom: 4px;
+    }
+  }
   &__item {
+    font-size: 16px;
+    line-height: 1.25;
+    padding: 8px 0;
     &:before {
       content: ">";
       margin-right: 8px;
     }
+    @include mq(desktop) {
+      font-size: 18px;
+      line-height: 1.22;
+      padding: 16px 0;
+    }
+  }
+  &__content-list {
+    position: relative;
+    overflow: hidden;
+  }
+  &__item-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    transition: transform 2500ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @include mq(desktop) {
+      position: relative;
+      visibility: visible;
+      transition: none;
+    }
   }
   &__button {
-    margin-top: 18px;
+    margin-top: 8px;
+    @include mq(desktop) {
+      display: none;
+    }
   }
+
+//Service block in program 
+
   &__service{
     display: grid;
-    // height: 100vh;
     grid-template-columns: repeat(2, 130px);
     margin-top: 55px;
     grid-column-gap: 20px;
-    
+    @include mq(tablet and tablet-only) {
+      grid-template-columns: repeat(2, 152px);
+      grid-column-gap: 33px;
+      margin-top: 0;
+    }
+    @include mq(desktop) {
+      grid-template-columns: repeat(2, 180px);
+      grid-column-gap: 140px;
+      margin-top: 43px;
+    }
   }
   &__img {
     position: absolute;
     top: -40px;
     left: 25px;
+    @include mq(tablet and tablet-only) {
+      top: -36px;
+      left: 37px;
+    }
+    @include mq(desktop) {
+      top: -36px;
+      left: 37px;
+    }
   }
   &__service-item {
     padding: 50px 6px 38px 6px;
@@ -37,17 +130,51 @@
     &:nth-child(4) {
       margin-top: 59px;
     }
+    @include mq(tablet and tablet-only) {
+      width: 152px;
+      height: 152px;
+     
+      &:nth-child(2) {
+        margin-top: 50px;
+      }
+      &:nth-child(3) {
+        margin-top: 0;
+      }
+      &:nth-child(4) {
+        margin-top: 45px;
+      }
+    }
+      @include mq(desktop) {
+        width: 180px;
+        height: 180px;
+       
+        &:nth-child(2) {
+          margin-top: 128px;
+        }
+        &:nth-child(3) {
+          margin-top: -50px;
+        }
+        &:nth-child(4) {
+          margin-top: 75px;
+        }
+    }
   }
   &__service-link {
     text-decoration: none;
-    color:inherit;
+    color: inherit;
   }
   &__service-title {
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
+    line-height: 1.27;
     font-family: Caveat Brush;
     text-align: center;
+
+    @include mq(desktop) {
+      font-size: 24px;
+      line-height: 1.25;
+    }
   }
   &__sevice-text {
     text-align: center;
@@ -56,11 +183,31 @@
     line-height: 1.2;
     font-style: normal;
     font-weight: 400;
+    
+    @include mq(desktop) {
+      font-size: 16px;
+      line-height: 1.25;
+    }
   }
   &__icons {
     position: absolute;
     bottom: 10px;
     left: 42%;
+    @include mq(tablet and tablet-only) {
+      width: 21px;
+      height: 21px;
+      bottom: 14px;
+    }
+    @include mq(desktop) {
+      width: 25px;
+      height: 25px;
+      bottom: 16px;
+    }
+  }
+.isOpenList {
+    position: inherit;
+    visibility: visible;
+    transition: transform 2500ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   // &__service-link {
   //   list-style: none;
@@ -72,6 +219,5 @@
   }
 
 
-  /* Cooking classes */
 
 

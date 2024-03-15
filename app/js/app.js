@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //   });
   // });
   burgerMenu();
+  toggleProgramList();
 });
 
 function burgerMenu() {
@@ -23,6 +24,25 @@ function burgerMenu() {
 
   openMenuBtn.addEventListener("click", toggleMenu);
   closedMenuBtn.addEventListener("click", toggleMenu);
+}
+
+function toggleProgramList() {
+  const toggleButton = document.querySelector(".program__button");
+  const programList = document.querySelector(".program__item-text");
+
+  const toggleList = () => {
+    const isProgramListOpen =
+      toggleButton.getAttribute("aria-expended") === "true" || false;
+    toggleButton.setAttribute("aria-expended", !isProgramListOpen);
+    programList.classList.toggle("isOpenList");
+    if (isProgramListOpen === true) {
+      toggleButton.textContent = "Read More";
+    } else {
+      toggleButton.textContent = "Less";
+    }
+  };
+
+  toggleButton.addEventListener("click", toggleList);
 }
 
 // function scrollToSection(e) {
