@@ -88,15 +88,18 @@
   &__service{
     display: grid;
     grid-template-columns: repeat(2, 130px);
+    grid-template-rows: auto;
     margin-top: 55px;
     grid-column-gap: 20px;
     @include mq(tablet and tablet-only) {
       grid-template-columns: repeat(2, 152px);
+      grid-template-rows: auto;
       grid-column-gap: 33px;
       margin-top: 0;
     }
     @include mq(desktop) {
       grid-template-columns: repeat(2, 180px);
+      grid-template-rows: auto;
       grid-column-gap: 140px;
       margin-top: 43px;
     }

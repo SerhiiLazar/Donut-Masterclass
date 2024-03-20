@@ -1,68 +1,53 @@
-<section class="reviews" id="reviews">
-    <div class="container">
-        <h2 class="reviews__title general-title">Reviews</h2>
-        <div class="reviews__block">
-            <div class="reviews__slider">
-                <article class="reviews__article">
-                    <!-- <img class="reviews__mask john"></img> -->
-                    <!-- <svg class="slider__stars">
-                        <use href="/src/images/sprite.svg#icon-four-star"></use>
-                    </svg> -->
-                    <h3 class="reviews__article-title">John</h3>
+<section class="reviews container" id="reviews">
+    <h2 class="reviews__title general-title">Reviews</h2>
+    <div class="reviews__slider">
+        <div class="reviews__slides">
+            <div class="reviews__wrapper">
+                <article class="reviews__slide">
+                    <div class="reviews__user-info">
+                        <img class="reviews__mask" src="./images/dist/Users/Will.png" />
+                        <div class="rating" data-rating="5"></div>
+                        <h3 class="reviews__article-title">Will</h3>
+                    </div>
                     <p class="reviews__article-text">
                         Last time I have visited a cooking course by Eva<br> I was impressed with the way she explained everything<br> to people. You can be sure you will manage to cook a delicious dish even if it is your first
                         time in the kitchen!<br class="mobile-br">
                         Thank you so much for the masterclass! Looking forward to the next one and highly
                         recommend it to everyone!</p>
                 </article>
-                <article class="reviews__article">
-                    <!-- <img class="reviews__mask john"></img> -->
-                    <!-- <svg class="slider__stars">
-                        <use href="/src/images/sprite.svg#icon-four-star"></use>
-                    </svg> -->
-                    <h3 class="reviews__article-title">Will</h3>
-                    <p class="reviews__article-text">
-                        Last time I have visited a cooking course by Eva<br> I was impressed with the way she explained everything<br> to people. You can be sure you will manage to cook a delicious dish even if it is your first
-                        time in the kitchen!<br class="mobile-br">
-                        Thank you so much for the masterclass! Looking forward to the next one and highly
-                        recommend it to everyone!</p>
-                </article>
-                <article class="reviews__article">
-                    <!-- <img class="reviews__mask john"></img> -->
-                    <!-- <svg class="slider__stars">
-                        <use href="/src/images/sprite.svg#icon-four-star"></use>
-                    </svg> -->
+                <article class="reviews__slide">
+                    <div class="reviews__user-info">
+                        <img class="reviews__mask" src="./images/dist/Users/Elisabeth.png" />
+                        <div class="rating" data-rating="5"></div>
                     <h3 class="reviews__article-title">Elisabeth</h3>
+                    </div>
                     <p class="reviews__article-text">
-                        Last time I have visited a cooking course by Eva<br> I was impressed with the way she explained everything<br> to people. You can be sure you will manage to cook a delicious dish even if it is your first
+                        I have visited a cooking course by Eva, I have visited a cooking course by Eva<br> I was impressed with the way she explained everything<br> to people. You can be sure you will manage to cook a delicious dish even if it is your first
                         time in the kitchen!<br class="mobile-br">
                         Thank you so much for the masterclass! Looking forward to the next one and highly
+                        recommend it to everyone!</p>
+                </article>
+                <article class="reviews__slide">
+                    <div class="reviews__user-info">
+                        <img class="reviews__mask" src="./images/dist/Users/John.png" />
+                        <div class="rating" data-rating="4"></div>
+                        <h3 class="reviews__article-title">John</h3>
+                    </div>
+                    <p class="reviews__article-text">
+                        I have visited a cooking course by Eva. Last time I have visited a cooking course by Eva<br> I was impressed with the way she explained everything<br> to people. You can be sure you will manage to cook a delicious dish even if it is your first
+                        time in the kitchen!<br class="mobile-br">
+                        I have visited a cooking course by Eva. Thank you so much for the masterclass! Looking forward to the next one and highly
                         recommend it to everyone!</p>
                 </article>
             </div>
-            
+            <div class="left-slides"></div>
+            <div class="right-slides"></div>
         </div>
-
-        <!-- Slider main container -->
-<div class="swiper">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-      <!-- Slides -->
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      ...
-    </div>
-    <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
-  
-    <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-  
-    <!-- If we need scrollbar -->
-    <div class="swiper-scrollbar"></div>
-  </div>
-
+        <div class="reviews__control-slide">
+            <button class="reviews__prev"></button>
+            <p class="reviews__slide-counter"></p>
+            <button class="reviews__next"></button>
+            
+        </div>    
     </div>
 </section>

@@ -1,4 +1,223 @@
-.swiper-wrapper {
-    color: black;
-    background-color: blue;
+.reviews {
+  position: relative;
+  margin-top: 26px;
+  padding-top: 24px;
+  @include mq(tablet and tablet-only) {
+  }
+  @include mq(desktop) {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+
+  }
+  &__title {
+    text-align: center !important;
+  }
+  &__slider {
+    margin-top: 60px;
+    position: relative;
+    @include mq(tablet and tablet-only) {
+      margin-top: 60px;
+    }
+    @include mq(desktop) {
+     margin-top: 178px;
+    }
+  }
+  &__slider article {
+    max-width: 100%;
+    display: none;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    transition: transform 0.5s ease;
+  }
+  &__mask {
+    display: block;
+    border-radius: 100%;
+    width: 280px;
+    height: 280px;
+    @include mq(tablet and tablet-only) {
+      width: 336px;
+      height: 336px;
+    }
+    @include mq(desktop) {
+      width: 394px;
+      height: 394px;
+    }
+  }
+  &__user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__article-text {
+    text-align: center;
+    line-height: 1.25;
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: 0;
+    color: #2E2520;
+    @include mq(tablet and tablet-only) {
+      margin-top: 20px;
+    }
+    @include mq(desktop) {
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 1.22;
+    }
+  }
+
+  &__control-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 32px;
+
+  }
+  &__slide-counter {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #AB816C;
+  }
+
+  &__next{
+    position: relative;
+    border: none;
+    width: 45px;
+    padding: 10px 0 10px 0;
+    margin-left: 5px;
+    background-color: inherit;
+    &::after {
+      content: "";
+      background-image: url("../images/dist/Users/line.png");
+      position: absolute;
+      background-size: cover;
+      width: 35px;
+      height: 1px;
+      top: 10px;
+      left: 4.5px;
+    }
+  }
+  &__prev{
+    position: relative;
+    border: none;
+    width: 45px;
+    padding: 10px 0 10px 0;
+    margin-right: 5px;
+    background-color: inherit;
+    &::after {
+      content: "";
+      background-image: url("../images/dist/Users/line.png");
+      position: absolute;
+      background-size: cover;
+      width: 35px;
+      height: 1px;
+      top: 10px;
+      right: 4.5px;
+    }
+  }
 }
+
+
+
+
+
+
+
+
+
+
+.left-slides,
+.right-slides {
+  display: none;
+
+  @include mq(tablet and tablet-only) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    pointer-events: none;
+  }
+  @include mq(desktop) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+  }
+}
+
+.left-slides {
+  display: none;
+  @include mq(tablet and tablet-only) {
+    display: block;
+    width: 152px;
+    left: 13px;
+    top: -77px;
+  }
+  @include mq(desktop) {
+    display: block;
+    width: 285px;
+    left: 106px;
+    top: -120px;
+  }
+}
+
+.right-slides {
+  display: none;
+  @include mq(tablet and tablet-only) {
+    display: block;
+    width: 152px;
+    right: 12px;
+    top: -77px;
+  }
+  @include mq(desktop) {
+    display: block;
+    width: 285px;
+    right: 104px;
+    top: -120px;
+  }
+}
+
+.left-slides .reviews__mask,
+.right-slides .reviews__mask {
+  display: none;
+  @include mq(tablet and tablet-only) {
+    display: block;
+    border-radius: 50%;
+    width: 151px;
+    height: 151px;
+    width: 100%;
+  }
+  @include mq(desktop) {
+    display: block;
+    width: 100%;
+    border-radius: 50%;
+    width: 285px;
+    height: 285px;
+  }
+}
+
+article.displaySlide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rating {
+    font-size: 24px;
+  }
+  
+.star {
+    margin: 0 2px 0 2px;
+    color: #AB816C; 
+}
+.star.filled {
+    color: #AB816C;
+}
+
