@@ -1,6 +1,6 @@
 .reviews {
   position: relative;
-  margin-top: 26px;
+  margin-top: 34px;
   padding-top: 24px;
   @include mq(tablet and tablet-only) {
   }
@@ -11,10 +11,32 @@
 
   }
   &__title {
-    text-align: center !important;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translate(-50%);
+    @include mq(tablet and tablet-only) {
+      position: relative;
+      text-align: center !important;
+      display: block;
+      top: 0;
+      left: 0;
+      transform: none;
+      margin-top: 60px;
+    }
+    @include mq(desktop) {
+      position: relative;
+      text-align: center !important;
+      top: 0;
+      left: 0;
+      transform: none;
+      position: relative;
+      margin-top: 178px;
+    }
+
   }
   &__slider {
-    margin-top: 60px;
+    margin-top: 15px;
     position: relative;
     @include mq(tablet and tablet-only) {
       margin-top: 60px;

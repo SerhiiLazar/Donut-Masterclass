@@ -1,72 +1,210 @@
 .registration {
-    &__title {
-        margin-top: 32px !important;
+  margin-top: 32px;
+  @include mq(tablet and tablet-only) {
+    margin-top: 113px;
+  }
+  @include mq(desktop) {
+    display: flex;
+    justify-content: center;
+    margin-top: 141px;
+  }
+  &__title {
+    margin-top: 32px !important;
+    @include mq(tablet and tablet-only) {
+      margin-top: 0 !important;
+      position: absolute;
+      top: -43px;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
-    &__wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #FFFFF9;
-        border-top-left-radius: 150px;
-        border-top-right-radius: 150px;
-        box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15), 4px 4px 4px rgba(171, 129, 108, 0.15);
-        margin-top: 32px;
-        max-height: 100%;
+    @include mq(desktop) {
+      margin-top: 0 !important;
+      position: absolute;
+      top: -43px;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
-    &__data {
-        margin-top: 20px;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    max-width: 466px;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fffff9;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+    box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15),
+      4px 4px 4px rgba(171, 129, 108, 0.15);
+    max-height: 100%;
+    @include mq(tablet and tablet-only) {
+      flex-direction: row;
+      justify-content: center;
+      gap: 56px;
+      margin: 0 auto;
+      max-width: 704px;
+
+      border-bottom-left-radius: 150px;
+      border-bottom-right-radius: 150px;
     }
-    &__amount {
-        margin-top: 20px;
+    @include mq(desktop) {
+      flex-direction: row;
+      justify-content: center;
+      max-width: 822px;
+      margin: 0 auto;
+
+      gap: 64px;
+      border-bottom-left-radius: 150px;
+      border-bottom-right-radius: 150px;
     }
-    &__form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        margin-top: 20px;
-        padding: 0 8px 0 8px;
-        position: relative;
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-color: rgba(171, 129, 108, 0.5);
-            height: 1px;
-            width: calc(100% - 16px);
-            margin-left: 8px;
-        }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mq(tablet and tablet-only) {
+      align-items: end;
     }
-    &__form-title {
-        margin-top: 8px;
-        color: #2E2520;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 1.25;
-        text-align: center;
-        
-        
+    @include mq(desktop) {
     }
-    &__form-label {
-        width: 100%;
-        margin-top: 20px;
-        border-bottom: 1px solid #AB816C;
-        
+  }
+  &__data {
+    margin-top: 20px;
+    line-height: 1.22;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  &__data-city {
+    line-height: 1.22;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  &__amount {
+    margin-top: 20px;
+    line-height: 1.22;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 8px 0 8px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(171, 129, 108, 0.5);
+      height: 1px;
+      width: calc(100% - 16px);
+      margin-left: 8px;
     }
-    &__form-input {
-        width: 100%;
-        border: none;
-        color: #AB816C;
-        &::placeholder {
-            color: rgba(171, 129, 108, 0.5);
-            line-height: 1.25;
-            font-size: 16px;
-            font-weight: 400;
-            font-style: normal;
-        }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -24px;
+      background-color: rgba(171, 129, 108, 0.5);
+      width: 1px;
+      height: calc(100% - 80px);
+      margin-top: 40px;
+      display: none;
     }
-    &__form-button {
-        margin-top: 32px;
+    @include mq(tablet and tablet-only) {
+      flex-direction: row;
+      width: auto;
+      gap: 54px;
+      padding: 0;
+      margin-top: 0;
+      // margin-bottom: 66px;
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        display: block;
+      }
     }
+    @include mq(desktop) {
+      flex-direction: row;
+      width: auto;
+      gap: 54px;
+
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        display: block;
+      }
+    }
+  }
+  &__form-title {
+    margin-top: 8px;
+    color: #2e2520;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    text-align: center;
+    @include mq(tablet and tablet-only) {
+      margin: 0;
+      text-align: start;
+    }
+    @include mq(desktop) {
+      margin: 0;
+      text-align: start;
+    }
+  }
+  &__form-content {
+    padding: 0;
+    @include mq(tablet and tablet-only) {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 20px;
+    }
+    @include mq(desktop) {
+    }
+  }
+  &__form-label {
+    width: 100%;
+    margin-top: 20px;
+    border-bottom: 1px solid #ab816c;
+    @include mq(tablet and tablet-only) {
+      width: auto;
+      margin-top: 16px;
+    }
+    @include mq(desktop) {
+    }
+  }
+  &__form-input {
+    width: 100%;
+    border: none;
+    color: #ab816c;
+    &::placeholder {
+      color: rgba(171, 129, 108, 0.5);
+      line-height: 1.25;
+      font-size: 16px;
+      font-weight: 400;
+      font-style: normal;
+    }
+  }
+  &__form-footer {
+    padding: 0;
+  }
+  &__form-button {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    @include mq(tablet and tablet-only) {
+      margin-top: 110px;
+      margin-bottom: 110px;
+    }
+    @include mq(desktop) {
+    }
+  }
 }

@@ -1,3 +1,43 @@
 .contact {
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px; 
+    width: 100%;
+    &__form-title {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 0.8;
+        text-align: center;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }  
+    &__form {
+    }
+    &__form-label {
+        width: 100%;
+        &:nth-child(3) {
+            margin-top: 20px;
+        }
+    } 
+    &__form-input {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #AB816C;
+        &::placeholder {
+            color: #AB816C;
+            opacity: 0.5;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 0.8;
+        }
+    }
+    &__form-button {
+        display: block;
+        margin: 0 auto;
+        margin-top: 32px;
+        width: 145px;
+        height: 40px;
+    }
 }
+

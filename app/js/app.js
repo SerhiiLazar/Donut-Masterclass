@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Custom JS
-
   initializeSlider();
   createRatingStars();
   burgerMenu();
@@ -82,7 +81,7 @@ function initializeSlider() {
       slideIndex = slides.length - 1;
     }
 
-    slides.forEach((slide) => {
+    slides.forEach(slide => {
       slide.classList.remove("displaySlide");
     });
     slides[slideIndex].classList.add("displaySlide");
@@ -116,7 +115,7 @@ function initializeSlider() {
   nextButtons.addEventListener("click", nextSlide);
   prevButtons.addEventListener("click", prevSlide);
 
-  slides.forEach((slide) => {
+  slides.forEach(slide => {
     slide.addEventListener("touchstart", touchStart, { passive: true });
     slide.addEventListener("touchmove", touchMove, { passive: true });
     slide.addEventListener("touchend", touchEnd, { passive: true });

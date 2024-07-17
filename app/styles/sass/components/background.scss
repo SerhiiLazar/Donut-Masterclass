@@ -1,82 +1,116 @@
 .upper-background {
-    width: 100%;
-
-    @include mq(mobile-only) {
-        background-image: url('../images/dist/header-pic-mobail.png'),
-        url('../images/dist/bg-header-mobail.png');
-        background-size: 120px 116px, 100%;
-        background-repeat: no-repeat;
-        background-position: top left, top;
-        @include mq(retina){
-          background-image: url('../images/dist/header/header@2x.png'),
-            url('../images/dist/bg@2x.png');
-            
-        }
-    }
-
-    @include mq(tablet and tablet-only){
-        background-image: url('../images/dist/header-pic-tablet.png'),
-          url('../images/dist/bg-header-tablet.png');
-        background-size: 380px 360px, 100%;
-        background-repeat: no-repeat;
-        background-position: top left 80%, top;
-    
-        @include mq(retina) {
-          background-image: url('../images/dist/header/header-tablet@2x.png'),
-          url('../images/dist/header/bg-tablet@2x.png');
-        }
-      }
-    
-      @include mq(desktop) {
-        background-image: url('../images/dist/spoon-desktop.png'),
-          url('../images/dist/header-pic-desktop.png'),
-          url('../images/dist/bg-header-desctop.png');
-        background-size: 144px 450px, 720px 660px, 100%;
-        background-repeat: no-repeat;
-        background-position: 0 501px, top right, top;
-    
-        @include mq(retina) {
-          background-image: url('../images/dist/header/spoon-desctop@2x.png'),
-          url('../images/dist/header/header-desctop@2x.png'),
-          url('../images/dist/header/bg-desctop@2x.png');
-        }
-      }
-    }
-.secondary-background {
   width: 100%;
 
   @include mq(mobile-only) {
-    z-index: 1000;
-    background-image: url('../images/dist/second-bg/bg-mobile1x.png');
-    background-size: 100% 1338px;
+    background-image: url("../images/dist/header-pic-mobail.png"),
+      url("../images/dist/bg-header-mobail.png");
+    background-size: 120px 116px, 100%;
     background-repeat: no-repeat;
-    background-position: top;
-    @include mq(retina){
-      background-image: url('../images/dist/second-bg/bg-mobile@2x.png');
-        
+    background-position: top left, top;
+    @include mq(retina) {
+      background-image: url("../images/dist/header/header@2x.png"),
+        url("../images/dist/bg@2x.png");
     }
-}
+  }
 
-@include mq(tablet and tablet-only){
-    background-image: url('../images/dist/second-bg/bg-tablet1x.png');
-    background-size: 100% 1520px;
+  @include mq(tablet and tablet-only) {
+    background-image: url("../images/dist/header-pic-tablet.png"),
+      url("../images/dist/bg-header-tablet.png");
+    background-size: 380px 360px, 100%;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: top left 80%, top;
 
     @include mq(retina) {
-      background-image: url('../images/dist/second-bg/bg-tablet@2x.png');
+      background-image: url("../images/dist/header/header-tablet@2x.png"),
+        url("../images/dist/header/bg-tablet@2x.png");
+    }
+  }
+
+  @include mq(desktop) {
+    background-image: url("../images/dist/spoon-desktop.png"),
+      url("../images/dist/header-pic-desktop.png"),
+      url("../images/dist/bg-header-desctop.png");
+    background-size: 144px 450px, 720px 660px, 100%;
+    background-repeat: no-repeat;
+    background-position: 0 501px, top right, top;
+
+    @include mq(retina) {
+      background-image: url("../images/dist/header/spoon-desctop@2x.png"),
+        url("../images/dist/header/header-desctop@2x.png"),
+        url("../images/dist/header/bg-desctop@2x.png");
+    }
+  }
+}
+.secondary-background {
+  width: 100%;
+
+  // @include mq(mobile-only) {
+  //   background-image: url("../images/dist/footer_image/footer_img_mobile1x.png");
+  //   background-size: 113px 99px, 100%;
+  //   background-repeat: no-repeat;
+  //   background-position: top right, top;
+  //   @include mq(retina) {
+  //     background-image: url("../images/dist/footer_image/footer_img_mobile@2x.png");
+  //   }
+  // }
+
+  // @include mq(tablet and tablet-only) {
+  //   background-image: url("../images/dist/footer_image/footer_img_tablet1x.png");
+  //   background-size: 207px 182px, 100%;
+  //   background-repeat: no-repeat;
+  //   background-position: top right, top;
+  //   @include mq(retina) {
+  //     background-image: url("../images/dist/footer_image/footer_img_tablet@2x.png");
+  //   }
+  // }
+
+  // @include mq(desktop) {
+  //   background-image: url("../images/dist/footer_image/footer_img_desktop1x.png");
+  //   background-size: 355px 312px, 100%;
+  //   background-repeat: no-repeat;
+  //   background-position: top right, top;
+
+  //   @include mq(retina) {
+  //     background-image: url("../images/dist/footer_image/footer_img_desktop@2x.png");
+  //   }
+
+  @include mq(mobile-only) {
+    z-index: 1000;
+    background-image: url("../images/dist/second-bg/bg-mobile1x.png"),
+      url("../images/dist/footer_image/footer_img_mobile1x.png");
+    background-size: 100% 1330px, 113px 99px;
+    background-repeat: no-repeat;
+    background-position: top, bottom right;
+    @include mq(retina) {
+      background-image: url("../images/dist/second-bg/bg-mobile@2x.png"),
+        url("../images/dist/footer_image/footer_img_mobile@2x.png");
+    }
+  }
+
+  @include mq(tablet and tablet-only) {
+    background-image: url("../images/dist/second-bg/bg-tablet1x.png"),
+      url("../images/dist/footer_image/footer_img_tablet1x.png");
+    background-size: 100% 1520px, 207px 182px;
+    background-repeat: no-repeat;
+    background-position: top, bottom right;
+
+    @include mq(retina) {
+      background-image: url("../images/dist/second-bg/bg-tablet@2x.png"),
+        url("../images/dist/footer_image/footer_img_tablet@2x.png");
     }
   }
 
   @include mq(desktop) {
     max-width: 100%;
-    background-image: url('../images/dist/second-bg/bg-desktop1x.png');
-      background-size: 100% 1860px;
-      background-repeat: no-repeat;
-      background-position: top;
+    background-image: url("../images/dist/footer_image/footer_img_desktop1x.png"),
+      url("../images/dist/second-bg/bg-desktop1x.png");
+    background-size: 312px, 100% 1860px;
+    background-repeat: no-repeat;
+    background-position: bottom right, top;
 
     @include mq(retina) {
-      background-image: url('../images/dist/second-bg/bg-desktop@2x.png');
+      background-image: url("../images/dist/footer_image/footer_img_desktop@2x.png"),
+        url("../images/dist/second-bg/bg-desktop@2x.png");
     }
   }
 }

@@ -1,0 +1,46 @@
+.footer {
+  margin-top: 32px;
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+  &__contacts {
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    @include mq(tablet and tablet-only) {
+      margin-top: 60px;
+    }
+    @include mq(desktop) {
+    }
+  }
+  &__tel {
+    margin-left: 20px;
+    @include mq(tablet and tablet-only) {
+      margin-left: 32px;
+    }
+    @include mq(desktop) {
+      margin-left: 123px;
+    }
+  }
+  &__location {
+    margin-right: 20px;
+    @include mq(tablet and tablet-only) {
+      margin-right: 111px;
+    }
+    @include mq(desktop) {
+      margin-right: 20rem;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: #2e2520;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 0.8;
+
+    margin-bottom: 20px;
+  }
+}
